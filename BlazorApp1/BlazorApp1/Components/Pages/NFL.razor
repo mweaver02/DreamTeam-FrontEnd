@@ -1,0 +1,122 @@
+﻿@page "/NFL"
+@rendermode InteractiveServer
+@using Microsoft.AspNetCore.Components.QuickGrid
+@using System.Data
+@using System.Data.OleDb
+
+<h1>NFL</h1>
+
+
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link active" @onclick='() => Navigate("NFLStandings2023")'>Standings</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" @onclick='() => Navigate("NFLTeamStatsOffense2023")'>Team Offense</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" @onclick='() => Navigate("NFLTeamStatsDefensive2023")'>Team Defense</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" @onclick='() => Navigate("NFLRushingStats2023")'>Rushing</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" @onclick='() => Navigate("NFLPassingStats2023")'>Passing</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" @onclick='() => Navigate("NFLReceivingStats2023")'>Recieving</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" @onclick='() => Navigate("NFLDefensiveStats2023")'>Defense</a>
+    </li>
+
+</ul>
+
+
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+            @foreach (DataColumn column in dataTable.Columns)
+            {
+                <th>@column.ColumnName</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (DataRow row in dataTable.Rows)
+        {
+            <tr>
+                @foreach (var cell in row.ItemArray)
+                {
+                    <td>@cell.ToString()</td>
+                }
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+
+<button class="btn btn-primary" @onclick="SearchMethod">Search</button>
+
+<input @bind="searchText" @bind:event="oninput" />
+
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+
+    <button class="btn btn-secondary" @onclick="clearButton"  >Clear </button>
+
+    <button class="btn btn-danger">Exit</button>
+
+</div>
+
+
+<select class="form-select" multiple>
+
+    @foreach(DataColumn column in dataTable.Columns)
+    {
+        <option value="@i"> @column.ColumnName </option>
+        i++;
+    }
+</select>
+
+<p> @searchText </p>
+
+
+
+
+
+
+@code {
+    //Declare a lot of variables
+        private readonly string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseNFL.accdb";
+
+        QueryClass queryClass = new QueryClass(); //Initialize the class
+        DataTable dataTable; //Initialize DataTable
+        string table = "NFLStandings2023"; //Default table
+        string searchText = ""; //Default text
+        string selectedColumn;
+        int i = 1; //index for the listbox (or in this case select option)
+
+    //On the page load, it calls the search method with default values
+    protected override void OnInitialized()
+    {
+        dataTable = queryClass.Search(connectionString, table);
+    }
+
+    //The navigation tabs (which are just list items) call this method on click event, and pass the tab's associated table name to the QueryClass
+    private void Navigate(string table)
+    {
+        dataTable = queryClass.Search(connectionString, table);
+    }
+
+    private void clearButton(MouseEventArgs e)
+    {
+        searchText = "";
+    }
+
+    private void SearchMethod(MouseEventArgs e)
+    {
+        //need columns
+        //dataTable = queryClass.SearchEPIC(connectionString, table, searchText);
+    }
+}

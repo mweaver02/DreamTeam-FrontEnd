@@ -1,10 +1,16 @@
 using BlazorApp1.Components;
+using System.Data;
+using System.Data.OleDb;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services.AddQuickGridEntityFrameworkAdapter();
+
 
 var app = builder.Build();
 
