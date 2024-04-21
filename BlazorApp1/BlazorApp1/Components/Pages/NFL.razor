@@ -4,6 +4,7 @@
 @using System.Data
 @using System.Data.OleDb
 @using System.Linq
+
 <h1>NFL</h1>
 
 
@@ -33,7 +34,7 @@
 </ul>
 
 
-<table class="table table-dark table-striped table-hover" > @*Table that gets values by looping through a generated DataTable*@
+<table class="table table-dark table-striped table-hover table-responsive" > @*Table that gets values by looping through a generated DataTable*@
     <thead>
         <tr>
             @foreach (DataColumn column in dataTable.Columns)
@@ -66,7 +67,7 @@
 
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
 
-    <button class="btn btn-secondary" @onclick="ClearTable"  >Clear </button> @*Clear Button*@
+    <button class="btn btn-secondary" @onclick="ClearAndReset"  >Clear </button> @*Clear Button*@
 
     <button class="btn btn-danger">Exit</button>
 
@@ -100,42 +101,44 @@
 
 
 @code {
+
     Sport Football; //Initialize our class
 
-    //Declare variables
+    //Our class needs a connection string, and a table name to work
     private readonly string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseNFL.accdb";
     string defaultTable = "NFLStandings2023"; 
 
+    //Initialize variables
     DataTable dataTable;
     string column = "";
     string searchText = "";
     const string allColumns = "";
 
 
-    //On the page load, it calls the search method with default values
-    protected override void OnInitialized()
+    protected override void OnInitialized()  //On the page load, it calls the search method with default values
+
     {
         Football = new Sport(connectionString, defaultTable);
         SearchTable();
         column = dataTable.Columns[0].ColumnName; //Set column (select element) to first option
     }
 
-    //The navigation tabs (which are just list items) call this method on click
-    private void Navigate(string newTable)
+    private void Navigate(string newTable) //The navigation tabs (which are just list items) call this method on click
+
     {
         Football.Table = newTable;
-        ClearTable();
+        ClearAndReset();
     }
 
-    private void ClearTable()
+    private void ClearAndReset()
     {
         searchText = "";
-        dataTable = Football.Search(allColumns, searchText); //If column is blank, search query performs a "SELECT *" statement
-        column = dataTable.Columns[0].ColumnName.ToString(); //Reset column to first option of table
+        dataTable = Football.Search(allColumns, searchText); //If column is blank, search query performs a 'select all' statement
+        column = dataTable.Columns[0].ColumnName; //Set column (select element) to first option
     }
 
     private void SearchTable()
     {
-        dataTable = Football.Search(column, searchText);
+        dataTable = Football.Search(column, searchText); //Class search method returns a new datatable filled with results
     }
 }
