@@ -8,7 +8,7 @@
 <h1>NFL</h1>
 
 
-<ul class="nav nav-tabs"> @*This is a list, that is styled to look like tabs. Each item has a click event that updates the table property by changing the string text*@
+<ul class="nav nav-tabs "> @*This is a list, that is styled to look like tabs. Each item has a click event that updates the table property by changing the string text*@
     <li class="nav-item">
         <a class="nav-link active" @onclick='() => Navigate("NFLStandings2023")'>Standings</a>
     </li>
@@ -33,47 +33,47 @@
 
 </ul>
 
+<div style="max-height:500px; overflow:scroll;"> @*Put table in a div so it would have scrollbars*@
 
-<table class="table table-dark table-striped table-hover table-responsive" > @*Table that gets values by looping through a generated DataTable*@
-    <thead>
-        <tr>
-            @foreach (DataColumn column in dataTable.Columns)
-            {
-                <th>@column.ColumnName</th>
-            }
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (DataRow row in dataTable.Rows)
-        {
+    <table class="table table-dark table-striped table-hover table-responsive">
+
+        <thead class="sticky-top"> @*Made the headers sticky so they stap at the top when you scroll*@
             <tr>
-                @foreach (var cell in row.ItemArray)
+                @foreach (DataColumn column in dataTable.Columns)
                 {
-                    <td>@cell.ToString()</td>
+                    <th>@column.ColumnName</th>
                 }
             </tr>
-        }
+        </thead>
 
-    </tbody>
-</table>
+        <tbody >
+                @foreach (DataRow row in dataTable.Rows)
+                {
+                <tr>
+                        @foreach (var cell in row.ItemArray)
+                        {
+                        <td>@cell.ToString()</td>
+                        }
+                </tr>
+                }
 
-
-
-<button class="btn btn-primary" @onclick="SearchTable">Search</button> @*Search Button*@
-
-<input @bind="searchText" @bind:event="oninput" /> @*Input field used for searching tables*@
-
-
-
-<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-
-    <button class="btn btn-secondary" @onclick="ClearAndReset"  >Clear </button> @*Clear Button*@
-
-    <button class="btn btn-danger">Exit</button>
-
+        </tbody>
+    </table>
 </div>
 
 
+<div class="d-flex gap-2 pt-3 pb-3" > @*Inline css because I feel like it*@
+
+    <button class="btn btn-primary" @onclick="SearchTable">Search</button> @*Search Button*@
+
+    <input class="me-auto" @bind="searchText" @bind:event="oninput" /> @*Input field used for searching tables*@
+
+    <button class="btn btn-secondary" @onclick="ClearAndReset">Clear </button> @*Clear Button*@
+
+    <button class="btn btn-danger">Exit</button>
+
+
+</div>
 
 <select class="form-select" @bind="column"> @* A select element (like a dropdown combobox) *@
 

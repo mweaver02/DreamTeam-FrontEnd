@@ -21,7 +21,7 @@ namespace BlazorApp1.Components.Pages
         }
 
         //Method
-        public DataTable Search(string column, string text) 
+        public DataTable Search(string column, string text)
         {
             if (column == "")
             {
