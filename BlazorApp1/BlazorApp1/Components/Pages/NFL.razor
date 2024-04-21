@@ -62,11 +62,28 @@
 </div>
 
 
-<div class="d-flex gap-2 pt-3 pb-3" > @*Inline css because I feel like it*@
+<div class="d-flex gap-2 pt-4" > @*Inline css because I feel like it*@
 
     <button class="btn btn-primary" @onclick="SearchTable">Search</button> @*Search Button*@
 
-    <input class="me-auto" @bind="searchText" @bind:event="oninput" /> @*Input field used for searching tables*@
+    <input class="" @bind="searchText" @bind:event="oninput" /> @*Input field used for searching tables*@
+
+    <select class="form-select w-auto me-auto" @bind="column">
+        @* A select element (like a dropdown combobox) *@
+
+        <option value="@dataTable.Columns[0].ColumnName"> @dataTable.Columns[0].ColumnName </option> @*Set default value so column updates consistently*@
+
+        @{
+            var columnList = dataTable.Columns.Cast<DataColumn>(); //Cast columns so I can use the skip function
+        }
+
+        @foreach (DataColumn column in columnList.Skip(1)) @*First item is duplicate of default value, so skip it*@
+        {
+            <option> @column.ColumnName </option>
+        }
+
+    </select>
+
 
     <button class="btn btn-secondary" @onclick="ClearAndReset">Clear </button> @*Clear Button*@
 
@@ -75,27 +92,16 @@
 
 </div>
 
-<select class="form-select" @bind="column"> @* A select element (like a dropdown combobox) *@
+<div class="d-inline-flex gap-2 ">
 
-    <option value="@dataTable.Columns[0].ColumnName" > @dataTable.Columns[0].ColumnName </option> @*Set default value so column updates consistently*@
-
-    @{
-        var columnList = dataTable.Columns.Cast<DataColumn>(); //Cast columns so I can use the skip function
-    }
-
-    @foreach(DataColumn column in columnList.Skip(1) ) @*First item is duplicate of default value, so skip it*@
-    {
-        <option> @column.ColumnName </option>
-    }
-
-</select>
+</div>
 
 
 
-
-<p>Search Text: @searchText </p> @*Test elemets*@
+@*Test elemets*@
+@* <p>Search Text: @searchText </p> 
 <p>Selected Column: @column</p>
-
+ *@
 
 
 
