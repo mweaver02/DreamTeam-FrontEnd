@@ -3,11 +3,11 @@
 @using Microsoft.AspNetCore.Components.QuickGrid
 @using System.Data
 @using System.Data.OleDb
-
+@using System.Linq
 <h1>NFL</h1>
 
 
-<ul class="nav nav-tabs">
+<ul class="nav nav-tabs"> @*This is a list, that is styled to look like tabs. Each item has a click event that updates the table property by changing the string text*@
     <li class="nav-item">
         <a class="nav-link active" @onclick='() => Navigate("NFLStandings2023")'>Standings</a>
     </li>
@@ -33,7 +33,7 @@
 </ul>
 
 
-<table class="table table-dark table-striped">
+<table class="table table-dark table-striped table-hover" > @*Table that gets values by looping through a generated DataTable*@
     <thead>
         <tr>
             @foreach (DataColumn column in dataTable.Columns)
@@ -57,66 +57,85 @@
 </table>
 
 
-<button class="btn btn-primary" @onclick="SearchMethod">Search</button>
 
-<input @bind="searchText" @bind:event="oninput" />
+<button class="btn btn-primary" @onclick="SearchTable">Search</button> @*Search Button*@
+
+<input @bind="searchText" @bind:event="oninput" /> @*Input field used for searching tables*@
+
+
 
 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
 
-    <button class="btn btn-secondary" @onclick="clearButton"  >Clear </button>
+    <button class="btn btn-secondary" @onclick="ClearTable"  >Clear </button> @*Clear Button*@
 
     <button class="btn btn-danger">Exit</button>
 
 </div>
 
 
-<select class="form-select" multiple>
 
-    @foreach(DataColumn column in dataTable.Columns)
-    {
-        <option value="@i"> @column.ColumnName </option>
-        i++;
+<select class="form-select" @bind="column"> @* A select element (like a dropdown combobox) *@
+
+    <option value="@dataTable.Columns[0].ColumnName" > @dataTable.Columns[0].ColumnName </option> @*Set default value so column updates consistently*@
+
+    @{
+        var columnList = dataTable.Columns.Cast<DataColumn>(); //Cast columns so I can use the skip function
     }
+
+    @foreach(DataColumn column in columnList.Skip(1) ) @*First item is duplicate of default value, so skip it*@
+    {
+        <option> @column.ColumnName </option>
+    }
+
 </select>
 
-<p> @searchText </p>
 
+
+
+<p>Search Text: @searchText </p> @*Test elemets*@
+<p>Selected Column: @column</p>
 
 
 
 
 
 @code {
-    //Declare a lot of variables
-        private readonly string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseNFL.accdb";
+    Sport Football; //Initialize our class
 
-        QueryClass queryClass = new QueryClass(); //Initialize the class
-        DataTable dataTable; //Initialize DataTable
-        string table = "NFLStandings2023"; //Default table
-        string searchText = ""; //Default text
-        string selectedColumn;
-        int i = 1; //index for the listbox (or in this case select option)
+    //Declare variables
+    private readonly string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseNFL.accdb";
+    string defaultTable = "NFLStandings2023"; 
+
+    DataTable dataTable;
+    string column = "";
+    string searchText = "";
+    const string allColumns = "";
+
 
     //On the page load, it calls the search method with default values
     protected override void OnInitialized()
     {
-        dataTable = queryClass.Search(connectionString, table);
+        Football = new Sport(connectionString, defaultTable);
+        SearchTable();
+        column = dataTable.Columns[0].ColumnName; //Set column (select element) to first option
     }
 
-    //The navigation tabs (which are just list items) call this method on click event, and pass the tab's associated table name to the QueryClass
-    private void Navigate(string table)
+    //The navigation tabs (which are just list items) call this method on click
+    private void Navigate(string newTable)
     {
-        dataTable = queryClass.Search(connectionString, table);
+        Football.Table = newTable;
+        ClearTable();
     }
 
-    private void clearButton(MouseEventArgs e)
+    private void ClearTable()
     {
         searchText = "";
+        dataTable = Football.Search(allColumns, searchText); //If column is blank, search query performs a "SELECT *" statement
+        column = dataTable.Columns[0].ColumnName.ToString(); //Reset column to first option of table
     }
 
-    private void SearchMethod(MouseEventArgs e)
+    private void SearchTable()
     {
-        //need columns
-        //dataTable = queryClass.SearchEPIC(connectionString, table, searchText);
+        dataTable = Football.Search(column, searchText);
     }
 }
