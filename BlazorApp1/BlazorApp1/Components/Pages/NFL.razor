@@ -68,35 +68,28 @@
 
     <input class="" @bind="searchText" @bind:event="oninput" /> @*Input field used for searching tables*@
 
-    <select class="form-select w-auto me-auto" @bind="column">
-        @* A select element (like a dropdown combobox) *@
 
-        <option value="@dataTable.Columns[0].ColumnName"> @dataTable.Columns[0].ColumnName </option> @*Set default value so column updates consistently*@
+        <select class="form-select w-auto me-auto" @bind="column"> @* A select element (like a dropdown combobox) *@
 
-        @{
-            var columnList = dataTable.Columns.Cast<DataColumn>(); //Cast columns so I can use the skip function
-        }
+            <option value="@dataTable.Columns[0].ColumnName"> @dataTable.Columns[0].ColumnName </option> @*Set default value so column updates consistently*@
 
-        @foreach (DataColumn column in columnList.Skip(1)) @*First item is duplicate of default value, so skip it*@
-        {
-            <option> @column.ColumnName </option>
-        }
+            @{
+                var columnList = dataTable.Columns.Cast<DataColumn>(); //Cast columns so I can use the skip function
+            }
 
-    </select>
+            @foreach (DataColumn column in columnList.Skip(1)) @*First item is duplicate of default value, so skip it*@
+            {
+                <option> @column.ColumnName </option>
+            }
+
+        </select>
 
 
     <button class="btn btn-secondary" @onclick="ClearAndReset">Clear </button> @*Clear Button*@
 
     <button class="btn btn-danger">Exit</button>
 
-
 </div>
-
-<div class="d-inline-flex gap-2 ">
-
-</div>
-
-
 
 @*Test elemets*@
 @* <p>Search Text: @searchText </p> 
