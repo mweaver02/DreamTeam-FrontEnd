@@ -12,7 +12,7 @@ namespace BlazorApp1.Components.Pages
         public string Column { get; set; } //Right now, I think its better to pass the column as a parameter, but maybe we can use it in the future.
         string Query { get; set; }
 
-        //Object
+        //Constructor
         public Sport(string connectionString, string defaultTable)
         { 
             Connection = new OleDbConnection(connectionString);
