@@ -1,0 +1,149 @@
+﻿@page "/NFL"
+@rendermode InteractiveServer
+@using Microsoft.AspNetCore.Components.QuickGrid
+@using System.Data
+@using System.Data.OleDb
+@using System.Linq
+
+<h1>NFL
+    <svg fill="currentColor" width="40" height="40" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier"><path d="M21.84,5.56A4.08,4.08,0,0,0,20.7,3.31h0a4.08,4.08,0,0,0-2.25-1.14,13.65,13.65,0,0,0-5.29.24,1.17,1.17,0,0,0-.2.06,14.44,14.44,0,0,0-6.69,3.8A14.59,14.59,0,0,0,2.45,13c0,.06,0,.12-.05.19a13.7,13.7,0,0,0-.24,5.3A4.08,4.08,0,0,0,3.3,20.69h0a4.08,4.08,0,0,0,2.25,1.14A13.12,13.12,0,0,0,7.63,22a13.8,13.8,0,0,0,3.26-.41l.14,0a14.54,14.54,0,0,0,10.52-10.5c0-.06,0-.12.05-.19A13.7,13.7,0,0,0,21.84,5.56ZM16.37,4a10.44,10.44,0,0,1,1.76.14,1.68,1.68,0,0,1,.24.07L17,5.59,15.46,4.05C15.76,4,16.07,4,16.37,4ZM7.67,7.67a12.72,12.72,0,0,1,5.4-3.19L15.59,7,13.44,9.15l-.73-.73a1,1,0,0,0-1.42,0,1,1,0,0,0,0,1.41l.73.73L10.56,12l-.73-.73a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42l.73.73L7,15.59,4.49,13.08A12.67,12.67,0,0,1,7.67,7.67ZM4.21,18.37a1.68,1.68,0,0,1-.07-.24A11.38,11.38,0,0,1,4,15.46L5.59,17Zm1.66,1.49a1.68,1.68,0,0,1-.24-.07L7,18.41,8.54,20A11.38,11.38,0,0,1,5.87,19.86Zm10.46-3.53a12.67,12.67,0,0,1-5.41,3.18L8.41,17l2.15-2.15.73.73a1,1,0,1,0,1.42-1.41L12,13.44,13.44,12l.73.73a1,1,0,0,0,.71.29,1,1,0,0,0,.7-1.71l-.73-.73L17,8.41l2.51,2.51A12.67,12.67,0,0,1,16.33,16.33ZM20,8.54,18.41,7l1.38-1.37a1.68,1.68,0,0,1,.07.24A11.38,11.38,0,0,1,20,8.54Z"></path></g>
+    </svg>
+</h1>
+
+
+<ul class="nav nav-tabs "> @*This is a list, that is styled to look like tabs. Each item has a click event that updates the table property by changing the string text*@
+    <li class="nav-item">
+        <a class="nav-link active" @onclick='() => Navigate("NFLStandings2023")'>Standings</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" @onclick='() => Navigate("NFLTeamStatsOffense2023")'>Team Offense</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" @onclick='() => Navigate("NFLTeamStatsDefensive2023")'>Team Defense</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" @onclick='() => Navigate("NFLRushingStats2023")'>Rushing</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" @onclick='() => Navigate("NFLPassingStats2023")'>Passing</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" @onclick='() => Navigate("NFLReceivingStats2023")'>Recieving</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" @onclick='() => Navigate("NFLDefensiveStats2023")'>Defense</a>
+    </li>
+
+</ul>
+
+<div style="max-height:500px; overflow:scroll;"> @*Put table in a div so it would have scrollbars*@
+
+    <table class="table table-dark table-striped table-hover table-responsive">
+
+        <thead class="sticky-top"> @*Made the headers sticky so they stap at the top when you scroll*@
+            <tr>
+                @foreach (DataColumn column in dataTable.Columns)
+                {
+                    <th>@column.ColumnName</th>
+                }
+            </tr>
+        </thead>
+
+        <tbody >
+                @foreach (DataRow row in dataTable.Rows)
+                {
+                <tr>
+                        @foreach (var cell in row.ItemArray)
+                        {
+                        <td>@cell.ToString()</td>
+                        }
+                </tr>
+                }
+
+        </tbody>
+    </table>
+</div>
+
+
+<div class="d-flex gap-2 pt-4" > @*Inline css because I feel like it*@
+
+    <button class="btn btn-primary" @onclick="SearchTable">Search</button> @*Search Button*@
+
+    <input class="" @bind="searchText" @bind:event="oninput" /> @*Input field used for searching tables*@
+
+
+        <select class="form-select w-auto me-auto" @bind="column"> @* A select element (like a dropdown combobox) *@
+
+            <option value="@dataTable.Columns[0].ColumnName"> @dataTable.Columns[0].ColumnName </option> @*Set default value so column updates consistently*@
+
+            @{
+                var columnList = dataTable.Columns.Cast<DataColumn>(); //Cast columns so I can use the skip function
+            }
+
+            @foreach (DataColumn column in columnList.Skip(1)) @*First item is duplicate of default value, so skip it*@
+            {
+                <option> @column.ColumnName </option>
+            }
+
+        </select>
+
+
+    <button class="btn btn-secondary" @onclick="ClearAndReset">Clear </button> @*Clear Button*@
+
+    <button class="btn btn-danger">Exit</button>
+
+</div>
+
+@*Test elemets*@
+@* <p>Search Text: @searchText </p> 
+<p>Selected Column: @column</p>
+ *@
+
+
+
+
+@code {
+
+    Sport Football; //Initialize our class
+
+    //Our class needs a connection string, and a table name to work
+    private readonly string connectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=DatabaseNFL.accdb";
+    string defaultTable = "NFLStandings2023"; 
+
+    //Initialize variables
+    DataTable dataTable;
+    string column = "";
+    string searchText = "";
+    const string allColumns = "";
+
+
+    protected override void OnInitialized()  //On the page load, it calls the search method with default values
+
+    {
+        Football = new Sport(connectionString, defaultTable);
+        SearchTable();
+        column = dataTable.Columns[0].ColumnName; //Set column (select element) to first option
+    }
+
+    private void Navigate(string newTable) //The navigation tabs (which are just list items) call this method on click
+
+    {
+        Football.Table = newTable;
+        ClearAndReset();
+    }
+
+    private void ClearAndReset()
+    {
+        searchText = "";
+        dataTable = Football.Search(allColumns, searchText); //If column is blank, search query performs a 'select all' statement
+        column = dataTable.Columns[0].ColumnName; //Set column (select element) to first option
+    }
+
+    private void SearchTable()
+    {
+        dataTable = Football.Search(column, searchText); //Class search method returns a new datatable filled with results
+    }
+}

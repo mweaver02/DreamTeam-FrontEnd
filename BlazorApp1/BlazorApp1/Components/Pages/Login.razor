@@ -1,0 +1,95 @@
+﻿@page "/login"
+@inject NavigationManager NavigationManager
+
+<div class="login-component">
+    <h1>Login</h1>
+
+    <EditForm Model="@loginModel" OnValidSubmit="@HandleValidSubmit">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="input-fields">
+            <label for="username">User Name</label>
+            <InputText id="username" @bind-Value="loginModel.Username" />
+
+            <label for="password">Password</label>
+            <InputText id="password" @bind-Value="loginModel.Password" type="password" />
+        </div>
+
+        <button type="button">Login</button>
+        <button type="button" class="create-account-button" @onclick="CreateAccount">Create Account</button>
+    </EditForm>
+
+</div>
+
+@code {
+    private LoginModel loginModel = new LoginModel();
+
+    private async Task HandleValidSubmit()
+    {
+        // Handle login logic here
+
+    }
+
+    private class LoginModel
+    {
+        public string Username { get; set; }
+        public string Password { get; set; }
+    }
+
+    private void CreateAccount()
+    {
+        Console.WriteLine("clicked");
+        NavigationManager.NavigateTo("/create-account");
+    }
+}
+
+<style>
+    .login-component {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+        .login-component h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+    .input-fields {
+        display: flex;
+        flex-direction: column;
+        width: 20rem;
+        margin-bottom: 1rem;
+    }
+
+        .input-fields label {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-bottom: 0.25rem;
+        }
+
+        .input-fields input {
+            height: 2rem;
+            padding: 0 0.5rem;
+            font-size: 1rem;
+        }
+
+    .login-component button {
+        height: 2.5rem;
+        font-size: 1rem;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        margin-right:2rem;
+    }
+
+
+    .create-account-button {
+        background-color: #4CAF50;
+        border-radius: 0.5rem; 
+    }
+</style>

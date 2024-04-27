@@ -1,0 +1,248 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{16F2C18C-163D-4BF8-A498-600F5F8D81BA}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\vikto\\desktop\\dreamteam-frontend-blazorstart\\blazorapp1\\blazorapp1\\blazorapp1.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{16F2C18C-163D-4BF8-A498-600F5F8D81BA}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\blazorapp1.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16F2C18C-163D-4BF8-A498-600F5F8D81BA}|BlazorApp1\\BlazorApp1.csproj|C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\blazorapp1\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16F2C18C-163D-4BF8-A498-600F5F8D81BA}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16F2C18C-163D-4BF8-A498-600F5F8D81BA}|BlazorApp1\\BlazorApp1.csproj|C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\blazorapp1\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16F2C18C-163D-4BF8-A498-600F5F8D81BA}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16F2C18C-163D-4BF8-A498-600F5F8D81BA}|BlazorApp1\\BlazorApp1.csproj|C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\blazorapp1\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16F2C18C-163D-4BF8-A498-600F5F8D81BA}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16F2C18C-163D-4BF8-A498-600F5F8D81BA}|BlazorApp1\\BlazorApp1.csproj|c:\\users\\vikto\\desktop\\dreamteam-frontend-blazorstart\\blazorapp1\\blazorapp1\\components\\pages\\nba.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16F2C18C-163D-4BF8-A498-600F5F8D81BA}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\nba.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16F2C18C-163D-4BF8-A498-600F5F8D81BA}|BlazorApp1\\BlazorApp1.csproj|C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\blazorapp1\\components\\pages\\createaccount.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16F2C18C-163D-4BF8-A498-600F5F8D81BA}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\createaccount.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16F2C18C-163D-4BF8-A498-600F5F8D81BA}|BlazorApp1\\BlazorApp1.csproj|C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\blazorapp1\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16F2C18C-163D-4BF8-A498-600F5F8D81BA}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16F2C18C-163D-4BF8-A498-600F5F8D81BA}|BlazorApp1\\BlazorApp1.csproj|C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\blazorapp1\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16F2C18C-163D-4BF8-A498-600F5F8D81BA}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16F2C18C-163D-4BF8-A498-600F5F8D81BA}|BlazorApp1\\BlazorApp1.csproj|C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\blazorapp1\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16F2C18C-163D-4BF8-A498-600F5F8D81BA}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16F2C18C-163D-4BF8-A498-600F5F8D81BA}|BlazorApp1\\BlazorApp1.csproj|C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\blazorapp1\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16F2C18C-163D-4BF8-A498-600F5F8D81BA}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16F2C18C-163D-4BF8-A498-600F5F8D81BA}|BlazorApp1\\BlazorApp1.csproj|C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\blazorapp1\\components\\pages\\nfl.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{16F2C18C-163D-4BF8-A498-600F5F8D81BA}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\components\\pages\\nfl.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16F2C18C-163D-4BF8-A498-600F5F8D81BA}|BlazorApp1\\BlazorApp1.csproj|C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\blazorapp1\\wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{16F2C18C-163D-4BF8-A498-600F5F8D81BA}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16F2C18C-163D-4BF8-A498-600F5F8D81BA}|BlazorApp1\\BlazorApp1.csproj|C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\blazorapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16F2C18C-163D-4BF8-A498-600F5F8D81BA}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16F2C18C-163D-4BF8-A498-600F5F8D81BA}|BlazorApp1\\BlazorApp1.csproj|C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\blazorapp1\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{16F2C18C-163D-4BF8-A498-600F5F8D81BA}|BlazorApp1\\BlazorApp1.csproj|solutionrelative:blazorapp1\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BlazorApp1",
+              "DocumentMoniker": "C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\BlazorApp1\\BlazorApp1.csproj",
+              "RelativeDocumentMoniker": "BlazorApp1\\BlazorApp1.csproj",
+              "ToolTip": "C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\BlazorApp1\\BlazorApp1.csproj",
+              "RelativeToolTip": "BlazorApp1\\BlazorApp1.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-04-27T02:47:47.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\BlazorApp1\\Components\\_Imports.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\_Imports.razor",
+              "ToolTip": "C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\BlazorApp1\\Components\\_Imports.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\_Imports.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-23T08:03:00.638Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "App.razor",
+              "DocumentMoniker": "C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\BlazorApp1\\Components\\App.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\App.razor",
+              "ToolTip": "C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\BlazorApp1\\Components\\App.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\App.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-23T08:02:55.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Routes.razor",
+              "DocumentMoniker": "C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\BlazorApp1\\Components\\Routes.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Routes.razor",
+              "ToolTip": "C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\BlazorApp1\\Components\\Routes.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Routes.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-23T08:02:50.154Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Login.razor",
+              "DocumentMoniker": "C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\BlazorApp1\\Components\\Pages\\Login.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Login.razor",
+              "ToolTip": "C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\BlazorApp1\\Components\\Pages\\Login.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Login.razor",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAACYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-23T07:54:46.933Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\BlazorApp1\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\BlazorApp1\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Layout\\NavMenu.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-23T02:34:49.049Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\BlazorApp1\\Program.cs",
+              "RelativeDocumentMoniker": "BlazorApp1\\Program.cs",
+              "ToolTip": "C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\BlazorApp1\\Program.cs",
+              "RelativeToolTip": "BlazorApp1\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-23T02:36:17.657Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\BlazorApp1\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "BlazorApp1\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\BlazorApp1\\appsettings.Development.json",
+              "RelativeToolTip": "BlazorApp1\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-23T02:35:54.131Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "NFL.razor",
+              "DocumentMoniker": "C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\BlazorApp1\\Components\\Pages\\NFL.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\NFL.razor",
+              "ToolTip": "C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\BlazorApp1\\Components\\Pages\\NFL.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\NFL.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-23T02:33:36.976Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "app.css",
+              "DocumentMoniker": "C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\BlazorApp1\\wwwroot\\app.css",
+              "RelativeDocumentMoniker": "BlazorApp1\\wwwroot\\app.css",
+              "ToolTip": "C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\BlazorApp1\\wwwroot\\app.css",
+              "RelativeToolTip": "BlazorApp1\\wwwroot\\app.css",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAAAsAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-04-23T03:19:10.533Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NBA.razor",
+              "DocumentMoniker": "C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\BlazorApp1\\Components\\Pages\\NBA.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\NBA.razor",
+              "ToolTip": "C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\BlazorApp1\\Components\\Pages\\NBA.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\NBA.razor",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAAwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-23T02:33:58.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\BlazorApp1\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\BlazorApp1\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Layout\\MainLayout.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-23T03:02:08.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\BlazorApp1\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\BlazorApp1\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\Home.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-23T08:16:28.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CreateAccount.razor",
+              "DocumentMoniker": "C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\BlazorApp1\\Components\\Pages\\CreateAccount.razor",
+              "RelativeDocumentMoniker": "BlazorApp1\\Components\\Pages\\CreateAccount.razor",
+              "ToolTip": "C:\\Users\\vikto\\Desktop\\DreamTeam-FrontEnd-BlazorStart\\BlazorApp1\\BlazorApp1\\Components\\Pages\\CreateAccount.razor",
+              "RelativeToolTip": "BlazorApp1\\Components\\Pages\\CreateAccount.razor",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAD0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-23T08:03:13.04Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
